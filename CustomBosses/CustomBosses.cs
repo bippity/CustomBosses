@@ -89,8 +89,8 @@ namespace CustomBosses
                 #region EoC
                 case 4:
                     args.Npc.damage = 75;
-                    args.Npc.lifeMax = 5600; //2x health
-                    args.Npc.life = 5600;
+                    args.Npc.lifeMax = 10000; //2x health
+                    args.Npc.life = 10000;
                     break;
                 case 5:
                     args.Npc.damage = 60;
