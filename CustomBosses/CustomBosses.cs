@@ -9,7 +9,7 @@ using TerrariaApi.Server;
 
 namespace CustomBosses
 {
-    [ApiVersion(1, 16)]
+    [ApiVersion(1, 17)]
     public class CustomBosses : TerrariaPlugin
     {
         #region plugin info
@@ -62,104 +62,105 @@ namespace CustomBosses
                 args.Npc.life = 28000;
                 args.Npc.defense = 24;
             }*/
-            switch (args.Npc.type) //5x damage, around 30k health
+            NPC npc = Main.npc[args.NpcId];
+            switch (npc.type) //5x damage, around 30k health
             {
 #region Pre-HM
                 #region King Slime
                 case 50:
-                    args.Npc.damage = 200;
-                    args.Npc.lifeMax = 13000;
-                    args.Npc.life = 13000;
+                    npc.damage = 200;
+                    npc.lifeMax = 13000;
+                    npc.life = 13000;
                     break;
                 #endregion
                 #region Brain of Cthulhu
                 case 226:
-                    args.Npc.damage = 150;
-                    args.Npc.lifeMax = 5000;
-                    args.Npc.life = 5000;
+                    npc.damage = 150;
+                    npc.lifeMax = 5000;
+                    npc.life = 5000;
                     break;
                 #endregion
                 #region Queen Bee
                 case 222:
-                    args.Npc.damage = 150;
-                    args.Npc.lifeMax = 17000;
-                    args.Npc.life = 17000;
+                    npc.damage = 150;
+                    npc.lifeMax = 17000;
+                    npc.life = 17000;
                     break;
                 #endregion
                 #region EoC
                 case 4:
-                    args.Npc.damage = 75;
-                    args.Npc.lifeMax = 10000; //2x health
-                    args.Npc.life = 10000;
+                    npc.damage = 75;
+                    npc.lifeMax = 10000; //2x health
+                    npc.life = 10000;
                     break;
                 case 5:
-                    args.Npc.damage = 60;
-                    args.Npc.lifeMax = 25;
-                    args.Npc.life = 25;
+                    npc.damage = 60;
+                    npc.lifeMax = 25;
+                    npc.life = 25;
                     break;
                 #endregion
                 #region Eater of Worlds
                 case 13:
-                    args.Npc.damage = 110;
-                    args.Npc.lifeMax = 325;
-                    args.Npc.life = 325;
+                    npc.damage = 110;
+                    npc.lifeMax = 325;
+                    npc.life = 325;
                     break;
                 case 14:
-                    args.Npc.damage = 65;
-                    args.Npc.lifeMax = 750;
-                    args.Npc.life = 750;
+                    npc.damage = 65;
+                    npc.lifeMax = 750;
+                    npc.life = 750;
                     break;
                 case 15:
-                    args.Npc.damage = 60;
-                    args.Npc.lifeMax = 1100;
-                    args.Npc.life = 1100;
+                    npc.damage = 60;
+                    npc.lifeMax = 1100;
+                    npc.life = 1100;
                     break;
                 #endregion
                 #region WoF
                 case 113:
-                    args.Npc.damage = 250;
-                    args.Npc.lifeMax = 29000;
-                    args.Npc.life = 29000;
+                    npc.damage = 250;
+                    npc.lifeMax = 29000;
+                    npc.life = 29000;
                     break;
                 case 114:
-                    args.Npc.damage = 350;
-                    args.Npc.lifeMax = 20000;
-                    args.Npc.life = 20000;
+                    npc.damage = 350;
+                    npc.lifeMax = 20000;
+                    npc.life = 20000;
                     break;
                 case 115:
-                    args.Npc.damage = 150;
-                    args.Npc.lifeMax = 10000;
-                    args.Npc.life = 10000;
+                    npc.damage = 150;
+                    npc.lifeMax = 10000;
+                    npc.life = 10000;
                     break;
                 case 116:
-                    args.Npc.damage = 150;
-                    args.Npc.lifeMax = 10000;
-                    args.Npc.life = 10000;
+                    npc.damage = 150;
+                    npc.lifeMax = 10000;
+                    npc.life = 10000;
                     break;
                 #endregion
 #endregion
 #region HM
                 #region Golem
                 case 245:
-                    args.Npc.damage = 750;
-                    args.Npc.lifeMax = 28000;
-                    args.Npc.life = 28000;
+                    npc.damage = 750;
+                    npc.lifeMax = 28000;
+                    npc.life = 28000;
                     break;
                 case 246:
-                    args.Npc.damage = 150;
-                    args.Npc.lifeMax = 20000;
-                    args.Npc.life = 20000;
+                    npc.damage = 150;
+                    npc.lifeMax = 20000;
+                    npc.life = 20000;
                     break;
                 case 247:
                 case 248:
-                    args.Npc.damage = 300;
-                    args.Npc.lifeMax = 9000;
-                    args.Npc.life = 9000;
+                    npc.damage = 300;
+                    npc.lifeMax = 9000;
+                    npc.life = 9000;
                     break;
                 case 249:
-                    args.Npc.damage = 400;
-                    args.Npc.lifeMax = 28000;
-                    args.Npc.life = 28000;
+                    npc.damage = 400;
+                    npc.lifeMax = 28000;
+                    npc.life = 28000;
                     break;
                 #endregion
             }
